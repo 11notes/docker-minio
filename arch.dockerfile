@@ -79,9 +79,9 @@
 
   # :: default environment
     ENV APP_IMAGE=${APP_IMAGE} \
-      APP_NAME=${APP_NAME} \
-      APP_VERSION=${APP_VERSION} \
-      APP_ROOT=${APP_ROOT}
+        APP_NAME=${APP_NAME} \
+        APP_VERSION=${APP_VERSION} \
+        APP_ROOT=${APP_ROOT}
 
   # :: app specific environment
     ENV MINIO_ROOT_USER="admin" \
