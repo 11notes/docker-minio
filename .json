@@ -19,6 +19,7 @@
     "distroless": {
       "layers": [
         "11notes/distroless",
+        "11notes/distroless:localhealth",
         "11notes/distroless:openssl"
       ]
     },
