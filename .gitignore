@@ -1,0 +1,9 @@
+# default
+maintain/
+node_modules/
+
+# custom
+.env
+ca.key.txt
+ca.crt.txt
+password.txt

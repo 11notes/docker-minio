@@ -1,0 +1,29 @@
+{
+  "image": "11notes/minio",
+  "name": "minio",
+  "root": "/minio",
+  "build": {
+    "args": {
+      "version_build": "17-29-55Z"
+    }
+  },
+  "semver": {
+    "version": "2025.10.15"
+  },
+  "readme": {
+    "description": "Run minio rootless and distroless.",
+    "introduction": "minio Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover all your home devices, and you won't need any client-side software for that.",
+    "built": {
+      "minioHome": "https://github.com/minioTeam/minioHome"
+    },
+    "distroless": {
+      "layers": [
+        "11notes/distroless",
+        "11notes/distroless:openssl"
+      ]
+    },
+    "comparison": {
+      "image": "myminio:minio"
+    }
+  }
+}

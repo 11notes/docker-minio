@@ -1,0 +1,224 @@
+name: "s3"
+
+x-lockdown: &lockdown
+  # prevents write access to the image itself
+  read_only: true
+  # prevents any process within the container to gain more privileges
+  security_opt:
+    - "no-new-privileges=true"
+
+services:
+  minio1:
+    image: "11notes/minio:2025.10.15"
+    hostname: "minio1"
+    <<: *lockdown
+    environment:
+      TZ: "Europe/Zurich"
+      MINIO_ROOT_CA_KEY: |-
+        -----BEGIN PRIVATE KEY-----
+        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
+        5IEsPFZ71MLcvzsO1EGOSHD2S83WE90=
+        -----END PRIVATE KEY-----
+      MINIO_ROOT_CA_CRT: |-
+        -----BEGIN CERTIFICATE-----
+        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
+        UyuCD2xJ7aoQhGGXmvJeMG0a9yGQI5jC3vrJf6k=
+        -----END CERTIFICATE-----
+      MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
+    command: "https://minio{1...2}/mnt/disk{1...2}"
+    ports:
+      - "3000:3000/tcp"
+    volumes:
+      - "minio1.ssl:/minio/ssl"
+      - "/mnt/minio1:/mnt"
+    networks:
+      frontend:
+      backend:
+    restart: "always"
+
+  minio2:
+    image: "11notes/minio:2025.10.15"
+    hostname: "minio2"
+    <<: *lockdown
+    environment:
+      TZ: "Europe/Zurich"
+      MINIO_ROOT_CA_KEY: |-
+        -----BEGIN PRIVATE KEY-----
+        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
+        5IEsPFZ71MLcvzsO1EGOSHD2S83WE90=
+        -----END PRIVATE KEY-----
+      MINIO_ROOT_CA_CRT: |-
+        -----BEGIN CERTIFICATE-----
+        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
+        UyuCD2xJ7aoQhGGXmvJeMG0a9yGQI5jC3vrJf6k=
+        -----END CERTIFICATE-----
+      MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
+    command: "https://minio{1...2}/mnt/disk{1...2}"
+    volumes:
+      - "minio2.ssl:/minio/ssl"
+      - "/mnt/minio2:/mnt"
+    networks:
+      frontend:
+      backend:
+    restart: "always"
+
+volumes:
+  minio1.ssl:
+  minio2.ssl:
+
+networks:
+  frontend:
+  backend:
+    internal: true
