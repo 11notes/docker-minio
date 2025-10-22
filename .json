@@ -23,7 +23,7 @@
       ]
     },
     "comparison": {
-      "image": "myminio:minio"
+      "images": ["quay.io/minio/minio"]
     }
   }
 }
