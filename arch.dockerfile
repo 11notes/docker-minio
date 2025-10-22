@@ -94,14 +94,13 @@
     COPY --from=build /distroless/ /
     COPY --from=entrypoint /distroless/ /
     COPY --from=file-system --chown=${APP_UID}:${APP_GID} /distroless/ /
-    COPY --chown=${APP_UID}:${APP_GID} ./rootfs/ /
 
 # :: PERSISTENT DATA
   VOLUME ["${APP_ROOT}/ssl"]
 
 # :: MONITORING
   HEALTHCHECK --interval=5s --timeout=2s --start-period=5s \
-    CMD ["/usr/local/bin/localhealth", "https://127.0.0.1:9000/"]
+    CMD ["/usr/local/bin/localhealth", "https://127.0.0.1:3000/"]
 
 # :: EXECUTE
   USER ${APP_UID}:${APP_GID}
