@@ -12,9 +12,9 @@
   },
   "readme": {
     "description": "Run minio rootless and distroless.",
-    "introduction": "minio Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover all your home devices, and you won't need any client-side software for that.",
+    "introduction": "[MinIO](https://github.com/minio/minio) (created by [minio](https://github.com/minio)) is a high-performance, S3-compatible object storage solution released under the GNU AGPL v3.0 license. Designed for speed and scalability, it powers AI/ML, analytics, and data-intensive workloads with industry-leading performance.",
     "built": {
-      "minioHome": "https://github.com/minioTeam/minioHome"
+      "minio/minio": "https://github.com/minio/minio"
     },
     "distroless": {
       "layers": [
