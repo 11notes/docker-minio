@@ -7,7 +7,7 @@ Run minio rootless and distroless.
 
 # INTRODUCTION 📢
 
-minio Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover all your home devices, and you won't need any client-side software for that.
+[MinIO](https://github.com/minio/minio) (created by [minio](https://github.com/minio)) is a high-performance, S3-compatible object storage solution released under the GNU AGPL v3.0 license. Designed for speed and scalability, it powers AI/ML, analytics, and data-intensive workloads with industry-leading performance.
 
 # SYNOPSIS 📖
 **What can I do with this?** This image will run minio [rootless](https://github.com/11notes/RTFM/blob/main/linux/container/image/rootless.md) and [distroless](https://github.com/11notes/RTFM/blob/main/linux/container/image/distroless.md), for maximum security and performance. In addition to being small and secure, it will also automatically create the needed SSL certificate based on the Root CA you add via compose.
@@ -317,10 +317,10 @@ This image supports unraid by default. Simply add **-unraid** to any tag and the
 >This image is not based on another image but uses [scratch](https://hub.docker.com/_/scratch) as the starting layer.
 >The image consists of the following distroless layers that were added:
 >* [11notes/distroless](https://github.com/11notes/docker-distroless/blob/master/arch.dockerfile) - contains users, timezones and Root CA certificates, nothing else
->* 11notes/distroless:openssl
+>* [11notes/distroless:openssl](https://github.com/11notes/docker-distroless/blob/master/openssl.dockerfile) - app to manage SSL certificates
 
 # BUILT WITH 🧰
-* [minioHome](https://github.com/minioTeam/minioHome)
+* [minio/minio](https://github.com/minio/minio)
 
 # GENERAL TIPS 📌
 > [!TIP]
@@ -330,4 +330,4 @@ This image supports unraid by default. Simply add **-unraid** to any tag and the
 # ElevenNotes™️
 This image is provided to you at your own risk. Always make backups before updating an image to a different version. Check the [releases](https://github.com/11notes/docker-minio/releases) for breaking changes. If you have any problems with using this image simply raise an [issue](https://github.com/11notes/docker-minio/issues), thanks. If you have a question or inputs please create a new [discussion](https://github.com/11notes/docker-minio/discussions) instead of an issue. You can find all my other repositories on [github](https://github.com/11notes?tab=repositories).
 
-*created 22.10.2025, 22:50:38 (CET)*
+*created 22.10.2025, 22:58:42 (CET)*
