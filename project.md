@@ -1,5 +1,7 @@
 ${{ content_synopsis }} This image will run minio [rootless](https://github.com/11notes/RTFM/blob/main/linux/container/image/rootless.md) and [distroless](https://github.com/11notes/RTFM/blob/main/linux/container/image/distroless.md), for maximum security and performance. In addition to being small and secure, it will also automatically create the needed SSL certificate based on the Root CA you add via compose. Checkout [mc](https://github.com/11notes/docker-mc) to manage your cluster from CLI or use [minio-console](https://github.com/11notes/docker-minio-console) to manage it via the full web UI (pre cull).
 
+This image is meant to be used in a MinIO cluster, hence the example with multiple disks. You can however use it as [stand-alone](https://github.com/11notes/docker-minio/blob/master/compose.stand-alone.yml) installation too.
+
 ${{ content_uvp }} Good question! Because ...
 
 ${{ github:> [!IMPORTANT] }}
