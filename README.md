@@ -12,6 +12,8 @@ Run minio rootless and distroless.
 # SYNOPSIS 📖
 **What can I do with this?** This image will run minio [rootless](https://github.com/11notes/RTFM/blob/main/linux/container/image/rootless.md) and [distroless](https://github.com/11notes/RTFM/blob/main/linux/container/image/distroless.md), for maximum security and performance. In addition to being small and secure, it will also automatically create the needed SSL certificate based on the Root CA you add via compose. Checkout [mc](https://github.com/11notes/docker-mc) to manage your cluster from CLI or use [minio-console](https://github.com/11notes/docker-minio-console) to manage it via the full web UI (pre cull).
 
+This image is meant to be used in a MinIO cluster, hence the example with multiple disks. You can however use it as [stand-alone](https://github.com/11notes/docker-minio/blob/master/compose.stand-alone.yml) installation too.
+
 # UNIQUE VALUE PROPOSITION 💶
 **Why should I run this image and not the other image(s) that already exist?** Good question! Because ...
 
@@ -331,4 +333,4 @@ This image supports unraid by default. Simply add **-unraid** to any tag and the
 # ElevenNotes™️
 This image is provided to you at your own risk. Always make backups before updating an image to a different version. Check the [releases](https://github.com/11notes/docker-minio/releases) for breaking changes. If you have any problems with using this image simply raise an [issue](https://github.com/11notes/docker-minio/issues), thanks. If you have a question or inputs please create a new [discussion](https://github.com/11notes/docker-minio/discussions) instead of an issue. You can find all my other repositories on [github](https://github.com/11notes?tab=repositories).
 
-*created 23.10.2025, 14:44:24 (CET)*
+*created 23.10.2025, 15:28:05 (CET)*
