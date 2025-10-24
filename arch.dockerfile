@@ -27,7 +27,7 @@
   RUN set -ex; \
     SEMVER=$(echo ${APP_VERSION} | sed 's|\.|-|g'); \
     eleven git clone ${BUILD_SRC} RELEASE.${SEMVER}T${APP_VERSION_BUILD}; \
-    sed -i 's|ReleaseTag = "DEVELOPMENT.GOGET"|ReleaseTag = "RELEASE.'${SEMVER}'T'${APP_VERSION_BUILD}'"|g' ${BUILD_ROOT}/cmd/build-constants.go; \
+    sed -i 's|"DEVELOPMENT.GOGET"|"RELEASE.'${SEMVER}'T'${APP_VERSION_BUILD}'"|g' ${BUILD_ROOT}/cmd/build-constants.go; \
     sed -i 's|fmt.Fprintln(banner, color.Blue("Version:")+color.Bold(" %s (%s %s/%s)", ReleaseTag, runtime.Version(), runtime.GOOS, runtime.GOARCH))|fmt.Fprint(banner, color.Blue("Version:")+color.Bold(" %s", ReleaseTag))|g' ${BUILD_ROOT}/cmd/main.go; \
     sed -i 's|fmt.Fprintln(banner, color.Blue("Copyright:|//|g' ${BUILD_ROOT}/cmd/main.go; \
     sed -i 's|fmt.Fprintln(banner, color.Blue("License:|//|g' ${BUILD_ROOT}/cmd/main.go; \
