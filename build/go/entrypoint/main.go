@@ -44,6 +44,11 @@ func main(){
 		cmd := os.Args[1]
 		if(strings.HasPrefix(cmd, "http")){
 			SSL()
+		}else{
+			_, err = Eleven.Util.Run("/usr/local/bin/openssl", []string{"req", "-x509", "-newkey", "rsa:4096", "-sha256", "-days", "3650", "-nodes", "-keyout", ROOT_SSL + "/private.key", "-out", ROOT_SSL + "/public.crt", "-subj", "/CN=" + os.Getenv("HOSTNAME")})
+			if err != nil {
+				Eleven.LogFatal("openssl: %s", err.Error())
+			}
 		}
 		if err := syscall.Exec("/usr/local/bin/minio", []string{"minio", "server", "--anonymous", "--json", "--certs-dir", ROOT_SSL, "--address", "0.0.0.0:9000", "--console-address", "0.0.0.0:9001", cmd}, env); err != nil {
 			os.Exit(1)
