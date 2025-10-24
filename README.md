@@ -334,4 +334,4 @@ This image supports unraid by default. Simply add **-unraid** to any tag and the
 # ElevenNotes™️
 This image is provided to you at your own risk. Always make backups before updating an image to a different version. Check the [releases](https://github.com/11notes/docker-minio/releases) for breaking changes. If you have any problems with using this image simply raise an [issue](https://github.com/11notes/docker-minio/issues), thanks. If you have a question or inputs please create a new [discussion](https://github.com/11notes/docker-minio/discussions) instead of an issue. You can find all my other repositories on [github](https://github.com/11notes?tab=repositories).
 
-*created 24.10.2025, 11:08:39 (CET)*
+*created 24.10.2025, 14:06:49 (CET)*
