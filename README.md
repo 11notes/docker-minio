@@ -148,7 +148,7 @@ services:
       MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
     command: "https://minio{1...2}/mnt/disk{1...2}"
     ports:
-      - "3000:3000/tcp"
+      - "3000:9001/tcp"
     volumes:
       - "minio1.ssl:/minio/ssl"
       - "/mnt/minio1:/mnt"
@@ -334,4 +334,4 @@ This image supports unraid by default. Simply add **-unraid** to any tag and the
 # ElevenNotes™️
 This image is provided to you at your own risk. Always make backups before updating an image to a different version. Check the [releases](https://github.com/11notes/docker-minio/releases) for breaking changes. If you have any problems with using this image simply raise an [issue](https://github.com/11notes/docker-minio/issues), thanks. If you have a question or inputs please create a new [discussion](https://github.com/11notes/docker-minio/discussions) instead of an issue. You can find all my other repositories on [github](https://github.com/11notes?tab=repositories).
 
-*created 24.10.2025, 09:23:30 (CET)*
+*created 24.10.2025, 10:38:42 (CET)*
