@@ -19,17 +19,15 @@ services:
     # then mount any volume to /mnt to store your data
     command: "/mnt"
     ports:
-      - "3000:3000/tcp"
+      - "3000:9001/tcp"
       - "9000:9000/tcp"
     volumes:
-      - "minio.ssl:/minio/ssl"
       - "minio.var:/mnt"
     networks:
       frontend:
     restart: "always"
 
 volumes:
-  minio.ssl:
   minio.var:
 
 networks:

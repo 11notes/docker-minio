@@ -45,7 +45,7 @@ func main(){
 		if(strings.HasPrefix(cmd, "http")){
 			SSL()
 		}
-		if err := syscall.Exec("/usr/local/bin/minio", []string{"minio", "server", "--anonymous", "--json", "--certs-dir", ROOT_SSL, "--address", "0.0.0.0:9000", "--console-address", "0.0.0.0:3000", cmd}, env); err != nil {
+		if err := syscall.Exec("/usr/local/bin/minio", []string{"minio", "server", "--anonymous", "--json", "--certs-dir", ROOT_SSL, "--address", "0.0.0.0:9000", "--console-address", "0.0.0.0:9001", cmd}, env); err != nil {
 			os.Exit(1)
 		}
 	}else{

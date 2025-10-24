@@ -103,7 +103,7 @@ services:
       MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
     command: "https://minio{1...2}/mnt/disk{1...2}"
     ports:
-      - "3000:3000/tcp"
+      - "3000:9001/tcp"
     volumes:
       - "minio1.ssl:/minio/ssl"
       - "/mnt/minio1:/mnt"
