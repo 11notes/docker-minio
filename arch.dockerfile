@@ -105,7 +105,7 @@
 
 # :: MONITORING
   HEALTHCHECK --interval=5s --timeout=2s --start-period=5s \
-    CMD ["/usr/local/bin/localhealth", "https://127.0.0.1:9001/"]
+    CMD ["/usr/local/bin/localhealth", "https://127.0.0.1:9000/minio/health/live"]
 
 # :: EXECUTE
   USER ${APP_UID}:${APP_GID}
