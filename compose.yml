@@ -103,11 +103,9 @@ services:
       MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
     command: 
       - "https://minio{1...2}/mnt/disk{1...2}"
-      - --sftp=":address=:8022"
-      - --sftp="disable-password-auth=false"
     ports:
+      - "9000:9000/tcp"
       - "3000:9001/tcp"
-      - "8022:8022/tcp"
     volumes:
       - "minio1.ssl:/minio/ssl"
       - "/mnt/minio1:/mnt"
