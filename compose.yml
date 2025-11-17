@@ -101,9 +101,13 @@ services:
         UyuCD2xJ7aoQhGGXmvJeMG0a9yGQI5jC3vrJf6k=
         -----END CERTIFICATE-----
       MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
-    command: "https://minio{1...2}/mnt/disk{1...2}"
+    command: 
+      - "https://minio{1...2}/mnt/disk{1...2}"
+      - --sftp=":address=:8022"
+      - --sftp="disable-password-auth=false"
     ports:
       - "3000:9001/tcp"
+      - "8022:8022/tcp"
     volumes:
       - "minio1.ssl:/minio/ssl"
       - "/mnt/minio1:/mnt"
@@ -205,7 +209,8 @@ services:
         UyuCD2xJ7aoQhGGXmvJeMG0a9yGQI5jC3vrJf6k=
         -----END CERTIFICATE-----
       MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
-    command: "https://minio{1...2}/mnt/disk{1...2}"
+    command:
+      - "https://minio{1...2}/mnt/disk{1...2}"
     volumes:
       - "minio2.ssl:/minio/ssl"
       - "/mnt/minio2:/mnt"
