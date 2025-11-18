@@ -8,7 +8,7 @@
     }
   },
   "semver": {
-    "version": "2025.10.15"
+    "version": "2025.0.0"
   },
   "readme": {
     "description": "Run minio rootless and distroless.",
@@ -24,7 +24,9 @@
       ]
     },
     "comparison": {
-      "images": ["quay.io/minio/minio"]
+      "images": [
+        "quay.io/minio/minio"
+      ]
     }
   }
 }
